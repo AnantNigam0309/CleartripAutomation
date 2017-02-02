@@ -10,20 +10,38 @@
     <line>
       <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
     </line>
+    <line>
+      <![CDATA[<div "result">Given  I am navigating to site &quot;Andnd&quot; (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Click on Book Button on second page (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Do continue booking (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Give Travellers information with some params (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  Give Payment information and proceed (passed : 0s)</div>]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="947" started-at="2017-02-02T19:32:13Z" finished-at="2017-02-02T19:32:14Z">
+  <suite name="Suite" duration-ms="610" started-at="2017-02-02T20:28:45Z" finished-at="2017-02-02T20:28:46Z">
     <groups>
       <group name="cucumber">
         <method signature="TestngTestRunner.run_cukes()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="run_cukes" class="Engine.TestngTestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="947" started-at="2017-02-02T19:32:13Z" finished-at="2017-02-02T19:32:14Z">
+    <test name="Test" duration-ms="610" started-at="2017-02-02T20:28:45Z" finished-at="2017-02-02T20:28:46Z">
       <class name="Engine.TestngTestRunner">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="beforeMethod" is-config="true" duration-ms="16" started-at="2017-02-03T01:02:14Z" finished-at="2017-02-03T01:02:14Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2017-02-03T01:58:45Z" finished-at="2017-02-03T01:58:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="run_cukes" duration-ms="901" started-at="2017-02-03T01:02:14Z" description="Runs Cucumber Features" finished-at="2017-02-03T01:02:14Z">
+        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="run_cukes" duration-ms="589" started-at="2017-02-03T01:58:45Z" description="Runs Cucumber Features" finished-at="2017-02-03T01:58:46Z">
           <reporter-output>
             <line>
               <![CDATA[<div "featureFile">Feature File: EndtoEnd.feature</div>]]>
@@ -34,9 +52,27 @@
             <line>
               <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
             </line>
+            <line>
+              <![CDATA[<div "result">Given  I am navigating to site &quot;Andnd&quot; (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Click on Book Button on second page (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Do continue booking (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Give Travellers information with some params (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  Give Payment information and proceed (passed : 0s)</div>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- run_cukes -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-02-03T01:02:14Z" finished-at="2017-02-03T01:02:14Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-02-03T01:58:46Z" finished-at="2017-02-03T01:58:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
