@@ -2,9 +2,12 @@ package generics;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -70,4 +73,52 @@ public class WebdriverGenerics extends Constant{
 			System.out.println(exp.getMessage());
 		}
 	}
+	
+	public static String GetTextFromWebelement(WebElement element){
+		String text=null;
+		try{
+			text=element.getText();
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+		return text;
+	}
+	
+	public static void ClickOnWebelements(WebElement element){
+		try{
+			element.click();
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
+	
+	public static void SendTextToElement(WebElement element,String text){
+		try{
+			element.sendKeys(text);
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
+	
+	public static void SendTextToElementUsingAction(WebElement element,String text){
+		try{
+			Actions action=new Actions(driver);
+			action.moveToElement(element);
+			action.click();
+			action.sendKeys(text);
+			action.build().perform();
+			Thread.sleep(1000);
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
+	
+	public static void PressEnterNow(WebElement element){
+		try{
+			element.sendKeys(Keys.ENTER);
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
+	
 }

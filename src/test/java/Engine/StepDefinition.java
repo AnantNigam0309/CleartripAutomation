@@ -1,7 +1,6 @@
 package Engine;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+import businesscomponent.Logics;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,6 +9,8 @@ import generics.WebdriverGenerics;
 
 public class StepDefinition {
 
+	Logics logics=new Logics();
+	
 	@Given("^I am navigating to site$")
 	public void NavigateToSite(){
 	   WebdriverGenerics.GetURL(Constant.URL);
@@ -19,6 +20,16 @@ public class StepDefinition {
 	@And("^Set Value on the First page with some params$")
 	public void SetFirstPage(){
 		//Set First page businesscomponent and call here
+	}
+	
+	@And("^Select kind of Trip as \"(.*?)\"$")
+	public void selectTripKind(String TripType){
+		logics.SelectTripWithGivenType(TripType);
+	}
+	
+	@And("^Select Booking From \"(.*?)\" to \"(.*?)\"$")
+	public void selectBookingFrom(String From,String To) throws InterruptedException{
+		logics.SelectBookingWithparams(From, To);
 	}
 	
 	@And("^Click on Book Button on second page$")

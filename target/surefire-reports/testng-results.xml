@@ -11,7 +11,13 @@
       <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Given  I am navigating to site (passed : 6s)</div>]]>
+      <![CDATA[<div "result">Given  I am navigating to site (passed : 4s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Select kind of Trip as &quot;One way&quot; (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Select Booking From &quot;Bangalore, IN - Kempegowda International Airport (BLR)&quot; to &quot;Varanasi, IN - Lal Bahadur Shastri (VNS)&quot; (passed : 2s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
@@ -29,19 +35,19 @@
       <![CDATA[<div "result">Then  Give Payment information and proceed (passed : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="10326" started-at="2017-02-05T07:18:45Z" finished-at="2017-02-05T07:18:55Z">
+  <suite name="Suite" duration-ms="12789" started-at="2017-02-05T09:22:28Z" finished-at="2017-02-05T09:22:41Z">
     <groups>
       <group name="cucumber">
         <method signature="TestngTestRunner.run_cukes()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="run_cukes" class="Engine.TestngTestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="10326" started-at="2017-02-05T07:18:45Z" finished-at="2017-02-05T07:18:55Z">
+    <test name="Test" duration-ms="12789" started-at="2017-02-05T09:22:28Z" finished-at="2017-02-05T09:22:41Z">
       <class name="Engine.TestngTestRunner">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="beforeMethod" is-config="true" duration-ms="3707" started-at="2017-02-05T12:48:45Z" finished-at="2017-02-05T12:48:48Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="beforeMethod" is-config="true" duration-ms="5237" started-at="2017-02-05T14:52:28Z" finished-at="2017-02-05T14:52:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FF]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
             <param index="1">
@@ -53,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="run_cukes" duration-ms="6475" started-at="2017-02-05T12:48:48Z" description="Runs Cucumber Features" finished-at="2017-02-05T12:48:55Z">
+        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="run_cukes" duration-ms="7413" started-at="2017-02-05T14:52:33Z" description="Runs Cucumber Features" finished-at="2017-02-05T14:52:40Z">
           <reporter-output>
             <line>
               <![CDATA[<div "featureFile">Feature File: EndtoEnd.feature</div>]]>
@@ -65,7 +71,13 @@
               <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Given  I am navigating to site (passed : 6s)</div>]]>
+              <![CDATA[<div "result">Given  I am navigating to site (passed : 4s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Select kind of Trip as &quot;One way&quot; (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Select Booking From &quot;Bangalore, IN - Kempegowda International Airport (BLR)&quot; to &quot;Varanasi, IN - Lal Bahadur Shastri (VNS)&quot; (passed : 2s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
@@ -84,7 +96,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- run_cukes -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="afterMethod" is-config="true" duration-ms="128" started-at="2017-02-05T12:48:55Z" finished-at="2017-02-05T12:48:55Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="afterMethod" is-config="true" duration-ms="125" started-at="2017-02-05T14:52:40Z" finished-at="2017-02-05T14:52:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

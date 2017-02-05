@@ -27,26 +27,36 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Set Value on the First page with some params",
+  "name": "Select kind of Trip as \"One way\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 7,
-  "name": "Click on Book Button on second page",
+  "name": "Select Booking From \"Bangalore, IN - Kempegowda International Airport (BLR)\" to \"Varanasi, IN - Lal Bahadur Shastri (VNS)\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "Do continue booking",
+  "name": "Set Value on the First page with some params",
   "keyword": "And "
 });
 formatter.step({
   "line": 9,
-  "name": "Give Travellers information with some params",
+  "name": "Click on Book Button on second page",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
+  "name": "Do continue booking",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "Give Travellers information with some params",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
   "name": "Give Payment information and proceed",
   "keyword": "Then "
 });
@@ -54,42 +64,72 @@ formatter.match({
   "location": "StepDefinition.NavigateToSite()"
 });
 formatter.result({
-  "duration": 6221982817,
+  "duration": 4244470440,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "One way",
+      "offset": 24
+    }
+  ],
+  "location": "StepDefinition.selectTripKind(String)"
+});
+formatter.result({
+  "duration": 382195860,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Bangalore, IN - Kempegowda International Airport (BLR)",
+      "offset": 21
+    },
+    {
+      "val": "Varanasi, IN - Lal Bahadur Shastri (VNS)",
+      "offset": 81
+    }
+  ],
+  "location": "StepDefinition.selectBookingFrom(String,String)"
+});
+formatter.result({
+  "duration": 2525822298,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.SetFirstPage()"
 });
 formatter.result({
-  "duration": 19611,
+  "duration": 29113,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.HandleSecondPage()"
 });
 formatter.result({
-  "duration": 22330,
+  "duration": 26075,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.ContinueBooking()"
 });
 formatter.result({
-  "duration": 23105,
+  "duration": 30713,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.TravellingInformation()"
 });
 formatter.result({
-  "duration": 19732,
+  "duration": 29369,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.FillPaymentInformation()"
 });
 formatter.result({
-  "duration": 22514,
+  "duration": 25041,
   "status": "passed"
 });
 });
