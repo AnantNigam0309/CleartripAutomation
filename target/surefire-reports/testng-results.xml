@@ -11,7 +11,7 @@
       <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
     </line>
     <line>
-      <![CDATA[<div "result">Given  I am navigating to site &quot;Andnd&quot; (passed : 0s)</div>]]>
+      <![CDATA[<div "result">Given  I am navigating to site (passed : 6s)</div>]]>
     </line>
     <line>
       <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
@@ -29,19 +29,31 @@
       <![CDATA[<div "result">Then  Give Payment information and proceed (passed : 0s)</div>]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="610" started-at="2017-02-02T20:28:45Z" finished-at="2017-02-02T20:28:46Z">
+  <suite name="Suite" duration-ms="10326" started-at="2017-02-05T07:18:45Z" finished-at="2017-02-05T07:18:55Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestngTestRunner.run_cukes()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="run_cukes" class="Engine.TestngTestRunner"/>
+        <method signature="TestngTestRunner.run_cukes()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="run_cukes" class="Engine.TestngTestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="610" started-at="2017-02-02T20:28:45Z" finished-at="2017-02-02T20:28:46Z">
+    <test name="Test" duration-ms="10326" started-at="2017-02-05T07:18:45Z" finished-at="2017-02-05T07:18:55Z">
       <class name="Engine.TestngTestRunner">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2017-02-03T01:58:45Z" finished-at="2017-02-03T01:58:45Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="beforeMethod" is-config="true" duration-ms="3707" started-at="2017-02-05T12:48:45Z" finished-at="2017-02-05T12:48:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FF]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.cleartrip.com/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="run_cukes" duration-ms="589" started-at="2017-02-03T01:58:45Z" description="Runs Cucumber Features" finished-at="2017-02-03T01:58:46Z">
+        <test-method status="PASS" signature="run_cukes()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="run_cukes" duration-ms="6475" started-at="2017-02-05T12:48:48Z" description="Runs Cucumber Features" finished-at="2017-02-05T12:48:55Z">
           <reporter-output>
             <line>
               <![CDATA[<div "featureFile">Feature File: EndtoEnd.feature</div>]]>
@@ -53,7 +65,7 @@
               <![CDATA[<div "scenario">Scenario: Just to Setup the Architecture</div>]]>
             </line>
             <line>
-              <![CDATA[<div "result">Given  I am navigating to site &quot;Andnd&quot; (passed : 0s)</div>]]>
+              <![CDATA[<div "result">Given  I am navigating to site (passed : 6s)</div>]]>
             </line>
             <line>
               <![CDATA[<div "result">And  Set Value on the First page with some params (passed : 0s)</div>]]>
@@ -72,7 +84,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- run_cukes -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@47f08b81]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-02-03T01:58:46Z" finished-at="2017-02-03T01:58:46Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Engine.TestngTestRunner@267517e4]" name="afterMethod" is-config="true" duration-ms="128" started-at="2017-02-05T12:48:55Z" finished-at="2017-02-05T12:48:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

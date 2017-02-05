@@ -2,7 +2,7 @@ Feature: To complete the flow of buying a ticket from Cleartrip
 
 @CaseSetup
 Scenario: Just to Setup the Architecture 
-Given I am navigating to site "Andnd"
+Given I am navigating to site
 And Set Value on the First page with some params
 And Click on Book Button on second page
 And Do continue booking

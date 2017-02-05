@@ -143,6 +143,8 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;URL&quot; value=&quot;https://www.cleartrip.com/&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;FF&quot;/&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Engine.TestngTestRunner&quot;/&gt;
@@ -197,12 +199,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'run_cukes')
 data.setCell(0, 2, 'Engine.TestngTestRunner')
-data.setCell(0, 3, 589);
+data.setCell(0, 3, 6475);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 589 ms</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,7 +221,7 @@ return data;
                 <span class="reporter-method-output"><div "featureFile">Feature File: EndtoEnd.feature</div></span>
                 <span class="reporter-method-output"><div "feature">Feature: To complete the flow of buying a ticket from Cleartrip</div></span>
                 <span class="reporter-method-output"><div "scenario">Scenario: Just to Setup the Architecture</div></span>
-                <span class="reporter-method-output"><div "result">Given  I am navigating to site &quot;Andnd&quot; (passed : 0s)</div></span>
+                <span class="reporter-method-output"><div "result">Given  I am navigating to site (passed : 6s)</div></span>
                 <span class="reporter-method-output"><div "result">And  Set Value on the First page with some params (passed : 0s)</div></span>
                 <span class="reporter-method-output"><div "result">And  Click on Book Button on second page (passed : 0s)</div></span>
                 <span class="reporter-method-output"><div "result">And  Do continue booking (passed : 0s)</div></span>
@@ -244,16 +246,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Engine.TestngTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
+                <span class="method-name">beforeMethod(FF, https://www.cleartrip.com/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">run_cukes</span>
-                <span class="method-start">6 ms</span>
+                <span class="method-start">3708 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">597 ms</span>
+                <span class="method-start">10185 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

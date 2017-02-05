@@ -22,7 +22,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 5,
-  "name": "I am navigating to site \"Andnd\"",
+  "name": "I am navigating to site",
   "keyword": "Given "
 });
 formatter.step({
@@ -51,51 +51,45 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Andnd",
-      "offset": 25
-    }
-  ],
-  "location": "StepDefinition.NavigateToSite(String)"
+  "location": "StepDefinition.NavigateToSite()"
 });
 formatter.result({
-  "duration": 178587986,
+  "duration": 6221982817,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.SetFirstPage()"
 });
 formatter.result({
-  "duration": 140726,
+  "duration": 19611,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.HandleSecondPage()"
 });
 formatter.result({
-  "duration": 117374,
+  "duration": 22330,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.ContinueBooking()"
 });
 formatter.result({
-  "duration": 118348,
+  "duration": 23105,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.TravellingInformation()"
 });
 formatter.result({
-  "duration": 120687,
+  "duration": 19732,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.FillPaymentInformation()"
 });
 formatter.result({
-  "duration": 128123,
+  "duration": 22514,
   "status": "passed"
 });
 });

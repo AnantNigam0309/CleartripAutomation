@@ -4,10 +4,13 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.TestNGCucumberRunner;
+import generics.Constant;
+import generics.WebdriverGenerics;
 
 
 @CucumberOptions(features="src/test/java/EngineFeatures/",
@@ -17,9 +20,12 @@ tags={"@CaseSetup"}
 
 public class TestngTestRunner {
 
+	@Parameters({"browserType","URL"})
 	@BeforeMethod
-	public void beforeMethod(){
-		System.out.println("Before method");
+	public void beforeMethod(String browserType,String URL){
+		Constant.URL=URL;
+		WebdriverGenerics.OpenBrowser(browserType);
+		
 	}
 	
 	@Test(groups = "cucumber", description = "Runs Cucumber Features")
@@ -29,6 +35,7 @@ public class TestngTestRunner {
 	
 	@AfterMethod
 	public void afterMethod(){
-		System.out.println("After method");
+		WebdriverGenerics.QuitBrowser();
+		System.out.println("All browsers are Finally Closed and Execution is completed");
 	}
 }

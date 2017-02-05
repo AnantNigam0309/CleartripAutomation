@@ -1,14 +1,19 @@
 package Engine;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import generics.Constant;
+import generics.WebdriverGenerics;
 
 public class StepDefinition {
 
-	@Given("^I am navigating to site \"(.*?)\"$")
-	public void NavigateToSite(String URL){
-		//Open Browser with URL
+	@Given("^I am navigating to site$")
+	public void NavigateToSite(){
+	   WebdriverGenerics.GetURL(Constant.URL);
+	   WebdriverGenerics.WaitImplicitlyForPageToLoad();
 	}
 	
 	@And("^Set Value on the First page with some params$")
