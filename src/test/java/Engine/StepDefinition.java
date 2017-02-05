@@ -3,6 +3,7 @@ package Engine;
 import businesscomponent.Logics;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import generics.Constant;
 import generics.WebdriverGenerics;
 
@@ -43,6 +44,20 @@ public class StepDefinition {
 		logics.ClickOnBookButton();
 	}
 	
+	@And("^Pass Itenerary on Third page$")
+	public void PassItenary() throws InterruptedException{
+		logics.PassItenary();
+	}
 	
+	@And("^Fill Traveller information as \"(.*?)\" \"(.*?)\" \"(.*?)\" \"(.*?)\" and Continue to payment$")
+	public void TravellerInformation(String title,String Fname,String Lname,String Mnumber) throws InterruptedException{
+		logics.PassTraveller(title, Fname, Lname, Mnumber);
+	}
+	
+	@Then("^Conform the payment option is Displayed$")
+	public void PaymentValidation() throws InterruptedException {
+		logics.PaymentValidation();
+		
+	}
 	
 }

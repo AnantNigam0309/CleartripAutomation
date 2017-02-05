@@ -50,11 +50,26 @@ formatter.step({
   "name": "Conform Booking from Second Page",
   "keyword": "And "
 });
+formatter.step({
+  "line": 11,
+  "name": "Pass Itenerary on Third page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "Fill Traveller information as \"Mr\" \"Anant\" \"Nigam\" \"8497846843\" and Continue to payment",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Conform the payment option is Displayed",
+  "keyword": "Then "
+});
 formatter.match({
   "location": "StepDefinition.NavigateToSite()"
 });
 formatter.result({
-  "duration": 3989770889,
+  "duration": 3869959443,
   "status": "passed"
 });
 formatter.match({
@@ -67,7 +82,7 @@ formatter.match({
   "location": "StepDefinition.selectTripKind(String)"
 });
 formatter.result({
-  "duration": 966743712,
+  "duration": 734292077,
   "status": "passed"
 });
 formatter.match({
@@ -84,7 +99,7 @@ formatter.match({
   "location": "StepDefinition.selectBookingFrom(String,String)"
 });
 formatter.result({
-  "duration": 2827168960,
+  "duration": 4911541471,
   "status": "passed"
 });
 formatter.match({
@@ -101,22 +116,60 @@ formatter.match({
   "location": "StepDefinition.selectDapartAndReturn(String,String)"
 });
 formatter.result({
-  "duration": 5130377808,
+  "duration": 2588129995,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clickOnSearchButton()"
 });
 formatter.result({
-  "duration": 150504074,
+  "duration": 153779637,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.conformBookingSecondPage()"
 });
 formatter.result({
-  "duration": 109448189617,
-  "error_message": "java.lang.NullPointerException\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:504)\n\tat org.openqa.selenium.By$ByXPath.findElements(By.java:356)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:351)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)\n\tat com.sun.proxy.$Proxy35.get(Unknown Source)\n\tat businesscomponent.Logics.ClickOnBookButton(Logics.java:64)\n\tat Engine.StepDefinition.conformBookingSecondPage(StepDefinition.java:43)\n\tat ✽.And Conform Booking from Second Page(EndtoEnd.feature:10)\n",
-  "status": "failed"
+  "duration": 7140016112,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefinition.PassItenary()"
+});
+formatter.result({
+  "duration": 6401484037,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Mr",
+      "offset": 31
+    },
+    {
+      "val": "Anant",
+      "offset": 36
+    },
+    {
+      "val": "Nigam",
+      "offset": 44
+    },
+    {
+      "val": "8497846843",
+      "offset": 52
+    }
+  ],
+  "location": "StepDefinition.TravellerInformation(String,String,String,String)"
+});
+formatter.result({
+  "duration": 5903362251,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefinition.PaymentValidation()"
+});
+formatter.result({
+  "duration": 8980975746,
+  "status": "passed"
 });
 });

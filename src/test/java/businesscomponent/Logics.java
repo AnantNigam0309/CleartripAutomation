@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import generics.Constant;
 import generics.WebdriverGenerics;
@@ -63,5 +64,43 @@ public class Logics extends WebdriverGenerics{
 		List<WebElement> list=elements.bookbtns;
 		ClickOnWebelements(list.get(0));
 		WaitImplicitlyForPageToLoad();
+	}
+	
+	public void PassItenary() throws InterruptedException{
+		System.out.println("Pass Itenary by Clicking on Continue at Bottom Of the Page");
+		ExplicitlyWaitForElement(elements.continuebtn);
+		if(CheckElementVisibility(elements.insuranceConform)){
+			ClickOnWebelements(elements.insuranceConform);
+		}
+		ClickOnWebelements(elements.continuebtn);
+		Thread.sleep(5000);
+		if(CheckElementVisibility(elements.userName)){
+			SendTextToElement(elements.userName, "RANDOMTESTAUTOMATION@mailinator.com");
+			ClickOnWebelements(elements.loginContinueBtn);
+		}
+		WaitImplicitlyForPageToLoad();
+	}
+	
+	public void PassTraveller(String title,String Fname,String Lname,String MobileNumber) throws InterruptedException{
+		System.out.println("Filling Traveller Information");
+		WaitImplicitlyForPageToLoad();
+		Thread.sleep(5000);
+		if(CheckElementVisibility(elements.trvellerbtn)){
+			SelectFromDropBox(elements.Title, title);
+			SendTextToElement(elements.Fname, Fname);
+			SendTextToElement(elements.Lname, Lname);
+			SendTextToElement(elements.mobilenumber, MobileNumber);
+			ClickOnWebelements(elements.trvellerbtn);
+		}
+		WaitImplicitlyForPageToLoad();
+	}
+	
+	public void PaymentValidation() throws InterruptedException{
+		System.out.println("Validating Payment option is Displayed");
+		ExplicitlyWaitForElement(elements.paymenttext);
+		
+		Thread.sleep(5000);
+	    Assert.assertTrue(CheckElementVisibility(elements.paymenttext));
+	    
 	}
 }

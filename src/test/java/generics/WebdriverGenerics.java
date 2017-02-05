@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebdriverGenerics extends Constant{
@@ -150,4 +151,14 @@ public class WebdriverGenerics extends Constant{
 			System.out.println(exp.getMessage());
 		}
 	}
+	
+	public static void SelectFromDropBox(WebElement element,String inputdata){
+		try{
+			Select option = new Select(element);
+			option.selectByVisibleText(inputdata);
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
 }
+

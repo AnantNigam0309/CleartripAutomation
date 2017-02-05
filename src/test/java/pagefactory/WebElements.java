@@ -26,8 +26,41 @@ public class WebElements {
 	@FindBy(id="SearchBtn")
 	public WebElement searchbtn;
 	
-	@FindBy(xpath="//button[contains(text(),'Book')]")
+	@FindBy(xpath="//div[@id='ResultContainer_1_1']/section[2]/section/div/form/section[2]/div[3]/div[3]/button")
 	public List<WebElement> bookbtns;
+	
+	@FindBy(xpath="//p[contains(text(),'Book in three simple steps')]")
+	public WebElement ValidationPage3Element;
+	
+	@FindBy(id="itineraryBtn")
+	public WebElement continuebtn;
+	
+	@FindBy(id="insurance_confirm")
+	public WebElement insuranceConform;
+	
+	@FindBy(id="username")
+	public WebElement userName;
+	
+	@FindBy(id="LoginContinueBtn_1")
+	public WebElement loginContinueBtn;
+	
+	@FindBy(name="AdultTitle1")
+	public WebElement Title;
+	
+	@FindBy(name="AdultFname1")
+	public WebElement Fname;
+	
+	@FindBy(name="AdultLname1")
+	public WebElement Lname;
+	
+	@FindBy(xpath="//div[@id='travellerOpen']//form/dl[1]//input[1]")
+	public WebElement mobilenumber;
+	
+	@FindBy(id="travellerBtn")
+	public WebElement trvellerbtn;
+	
+	@FindBy(id="paymentTitle")
+	public WebElement paymenttext;
 	
 	public WebElements(WebDriver driver){
 		this.driver=driver;
