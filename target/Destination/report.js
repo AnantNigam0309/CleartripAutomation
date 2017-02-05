@@ -27,7 +27,7 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Select kind of Trip as \"One way\"",
+  "name": "Select kind of Trip as \"Round trip\"",
   "keyword": "And "
 });
 formatter.step({
@@ -37,47 +37,37 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "Set Value on the First page with some params",
+  "name": "Select DepartDate as \"Thu, 16 Feb, 2017\" and ReturnDate as \"Thu, 18 Feb, 2017\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 9,
-  "name": "Click on Book Button on second page",
+  "name": "Click on Search button",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "Do continue booking",
+  "name": "Conform Booking from Second Page",
   "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "Give Travellers information with some params",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "Give Payment information and proceed",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "StepDefinition.NavigateToSite()"
 });
 formatter.result({
-  "duration": 4244470440,
+  "duration": 3989770889,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "One way",
+      "val": "Round trip",
       "offset": 24
     }
   ],
   "location": "StepDefinition.selectTripKind(String)"
 });
 formatter.result({
-  "duration": 382195860,
+  "duration": 966743712,
   "status": "passed"
 });
 formatter.match({
@@ -94,42 +84,39 @@ formatter.match({
   "location": "StepDefinition.selectBookingFrom(String,String)"
 });
 formatter.result({
-  "duration": 2525822298,
+  "duration": 2827168960,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinition.SetFirstPage()"
+  "arguments": [
+    {
+      "val": "Thu, 16 Feb, 2017",
+      "offset": 22
+    },
+    {
+      "val": "Thu, 18 Feb, 2017",
+      "offset": 60
+    }
+  ],
+  "location": "StepDefinition.selectDapartAndReturn(String,String)"
 });
 formatter.result({
-  "duration": 29113,
+  "duration": 5130377808,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinition.HandleSecondPage()"
+  "location": "StepDefinition.clickOnSearchButton()"
 });
 formatter.result({
-  "duration": 26075,
+  "duration": 150504074,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinition.ContinueBooking()"
+  "location": "StepDefinition.conformBookingSecondPage()"
 });
 formatter.result({
-  "duration": 30713,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepDefinition.TravellingInformation()"
-});
-formatter.result({
-  "duration": 29369,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepDefinition.FillPaymentInformation()"
-});
-formatter.result({
-  "duration": 25041,
-  "status": "passed"
+  "duration": 109448189617,
+  "error_message": "java.lang.NullPointerException\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:504)\n\tat org.openqa.selenium.By$ByXPath.findElements(By.java:356)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:351)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)\n\tat com.sun.proxy.$Proxy35.get(Unknown Source)\n\tat businesscomponent.Logics.ClickOnBookButton(Logics.java:64)\n\tat Engine.StepDefinition.conformBookingSecondPage(StepDefinition.java:43)\n\tat ✽.And Conform Booking from Second Page(EndtoEnd.feature:10)\n",
+  "status": "failed"
 });
 });

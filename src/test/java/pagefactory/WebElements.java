@@ -17,6 +17,18 @@ public class WebElements {
 	@FindBy(xpath="//div[@id='ORtrip']/section[1]//span")
 	public List<WebElement> trip_locator;
 	
+	@FindBy(id="DepartDate")
+	public WebElement Depart_on;
+	
+	@FindBy(id="ReturnDate")
+	public WebElement Return_on;
+	
+	@FindBy(id="SearchBtn")
+	public WebElement searchbtn;
+	
+	@FindBy(xpath="//button[contains(text(),'Book')]")
+	public List<WebElement> bookbtns;
+	
 	public WebElements(WebDriver driver){
 		this.driver=driver;
 	}

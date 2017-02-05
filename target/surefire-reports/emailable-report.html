@@ -31,27 +31,43 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">12.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">125.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">Engine.TestngTestRunner</td><td><a href="#m1"><b>run_cukes</b> (cucumber) ("Runs Cucumber Features")</a></td><td class="numi">1</td><td>1486286553468</td><td class="numi">7413</td></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">Engine.TestngTestRunner</td><td><a href="#m1"><b>run_cukes</b> (cucumber) ("Runs Cucumber Features")</a></td><td class="numi">1</td><td>1486290632710</td><td class="numi">122799</td></tr>
 </table>
 <h1>Test</h1>
 <h2 id="m1">Engine.TestngTestRunner:run_cukes</h2>
 <div style="padding-left:3em">
+<h3>Test Messages</h3>
 <div "featureFile">Feature File: EndtoEnd.feature</div><br/>
 <div "feature">Feature: To complete the flow of buying a ticket from Cleartrip</div><br/>
 <div "scenario">Scenario: Just to Setup the Architecture</div><br/>
-<div "result">Given  I am navigating to site (passed : 4s)</div><br/>
-<div "result">And  Select kind of Trip as &quot;One way&quot; (passed : 0s)</div><br/>
+<div "result">Given  I am navigating to site (passed : 3s)</div><br/>
+<div "result">And  Select kind of Trip as &quot;Round trip&quot; (passed : 0s)</div><br/>
 <div "result">And  Select Booking From &quot;Bangalore, IN - Kempegowda International Airport (BLR)&quot; to &quot;Varanasi, IN - Lal Bahadur Shastri (VNS)&quot; (passed : 2s)</div><br/>
-<div "result">And  Set Value on the First page with some params (passed : 0s)</div><br/>
-<div "result">And  Click on Book Button on second page (passed : 0s)</div><br/>
-<div "result">And  Do continue booking (passed : 0s)</div><br/>
-<div "result">And  Give Travellers information with some params (passed : 0s)</div><br/>
-<div "result">Then  Give Payment information and proceed (passed : 0s)</div><br/>
+<div "result">And  Select DepartDate as &quot;Thu, 16 Feb, 2017&quot; and ReturnDate as &quot;Thu, 18 Feb, 2017&quot; (passed : 5s)</div><br/>
+<div "result">And  Click on Search button (passed : 0s)</div><br/>
+<div "result">And  Conform Booking from Second Page (failed : 109s)</div><br/>
+<h3>Failure</h3>
+<p>java.lang.NullPointerException</p>
+cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:58)
+<br/>at Engine.TestngTestRunner.run_cukes(TestngTestRunner.java:33)
+<br/>58 lines not shown
+<p>Caused by null</p>
+org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:504)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:351)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+<br/>at com.sun.proxy.$Proxy35.get(Unknown Source)
+<br/>at businesscomponent.Logics.ClickOnBookButton(Logics.java:64)
+<br/>at Engine.StepDefinition.conformBookingSecondPage(StepDefinition.java:43)
+<br/>at ✽.And Conform Booking from Second Page(EndtoEnd.feature:10)
+<br/>1 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

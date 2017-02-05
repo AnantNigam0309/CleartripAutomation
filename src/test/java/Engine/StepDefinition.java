@@ -3,7 +3,6 @@ package Engine;
 import businesscomponent.Logics;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import generics.Constant;
 import generics.WebdriverGenerics;
 
@@ -17,11 +16,6 @@ public class StepDefinition {
 	   WebdriverGenerics.WaitImplicitlyForPageToLoad();
 	}
 	
-	@And("^Set Value on the First page with some params$")
-	public void SetFirstPage(){
-		//Set First page businesscomponent and call here
-	}
-	
 	@And("^Select kind of Trip as \"(.*?)\"$")
 	public void selectTripKind(String TripType){
 		logics.SelectTripWithGivenType(TripType);
@@ -32,23 +26,23 @@ public class StepDefinition {
 		logics.SelectBookingWithparams(From, To);
 	}
 	
-	@And("^Click on Book Button on second page$")
-	public void HandleSecondPage(){
-		//Click in generics 
+	
+	@And("^Select DepartDate as \"(.*?)\" and ReturnDate as \"(.*?)\"$")
+	public void selectDapartAndReturn(String Depart,String Return) throws InterruptedException{
+		logics.SelectDepartAndReturn(Depart, Return);
 	}
 	
-	@And("^Do continue booking$")
-	public void ContinueBooking(){
-		//Click in generics
+	@And("^Click on Search button$")
+	public void clickOnSearchButton() throws InterruptedException{
+		logics.ClickOnSearchButtonOnFirstPage();
 	}
 	
-	@And("^Give Travellers information with some params$")
-	public void TravellingInformation(){
-		//business comp
+	
+	@And("^Conform Booking from Second Page$")
+	public void conformBookingSecondPage() throws InterruptedException{
+		logics.ClickOnBookButton();
 	}
 	
-	@Then("Give Payment information and proceed$")
-	public void FillPaymentInformation(){
-		//businesscomponent
-	}
+	
+	
 }

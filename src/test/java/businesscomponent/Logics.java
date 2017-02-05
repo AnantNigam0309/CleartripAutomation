@@ -34,4 +34,34 @@ public class Logics extends WebdriverGenerics{
 		PressEnterNow(trip_locators.get(1));
 		WaitImplicitlyForPageToLoad();
 	}
+	
+	public void SelectDepartAndReturn(String Depart , String Return){
+		System.out.println("Selecting Depart and Return from "+Depart+" to "+Return);
+		if(CheckElementVisibility(elements.Depart_on)){
+			SendTextToElementUsingAction(elements.Depart_on,Depart);
+			PressEnterNow(elements.Depart_on);
+		}
+		if(CheckElementVisibility(elements.Return_on)){
+			PerformClearTextToInputField(elements.Return_on);
+			SendTextToElementUsingAction(elements.Return_on,Return);
+			PressEnterNow(elements.Return_on);
+		}
+		WaitImplicitlyForPageToLoad();
+	}
+	
+	public void ClickOnSearchButtonOnFirstPage(){
+		System.out.println("Clciking on Search button on First Page");
+		if(CheckElementVisibility(elements.searchbtn)){
+			ClickOnWebelements(elements.searchbtn);
+		}
+		WaitImplicitlyForPageToLoad();
+	}
+	
+	public void ClickOnBookButton(){
+		System.out.println("Confoming the Booking from page2");
+		ExplicitlyWaitForElement(elements.bookbtns.get(0));
+		List<WebElement> list=elements.bookbtns;
+		ClickOnWebelements(list.get(0));
+		WaitImplicitlyForPageToLoad();
+	}
 }

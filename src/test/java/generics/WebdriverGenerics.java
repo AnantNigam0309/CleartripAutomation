@@ -10,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebdriverGenerics extends Constant{
 
@@ -121,4 +123,31 @@ public class WebdriverGenerics extends Constant{
 		}
 	}
 	
+	public static boolean CheckElementVisibility(WebElement element){
+		boolean val=false;
+		try{
+			WaitImplicitlyForPageToLoad();
+			val=element.isDisplayed();
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+		return val;
+	}
+	
+	public static void PerformClearTextToInputField(WebElement element){
+		try{
+			element.clear();
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
+	
+	public static void ExplicitlyWaitForElement(WebElement element){
+		try{
+			WebDriverWait wait = new WebDriverWait(driver, 120);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+		}catch(Exception exp){
+			System.out.println(exp.getMessage());
+		}
+	}
 }
