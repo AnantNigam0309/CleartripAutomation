@@ -8,9 +8,9 @@ formatter.feature({
 });
 formatter.scenario({
   "line": 4,
-  "name": "Just to Setup the Architecture",
+  "name": "Step by Step Execution of Payment Flow on Cleartrip",
   "description": "",
-  "id": "to-complete-the-flow-of-buying-a-ticket-from-cleartrip;just-to-setup-the-architecture",
+  "id": "to-complete-the-flow-of-buying-a-ticket-from-cleartrip;step-by-step-execution-of-payment-flow-on-cleartrip",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -37,7 +37,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "Select DepartDate as \"Thu, 16 Feb, 2017\" and ReturnDate as \"Thu, 18 Feb, 2017\"",
+  "name": "Select DepartDate as \"Fri, 12 Jan, 2018\" and ReturnDate as \"Sun, 21 Jan, 2018\"",
   "keyword": "And "
 });
 formatter.step({
@@ -69,7 +69,7 @@ formatter.match({
   "location": "StepDefinition.NavigateToSite()"
 });
 formatter.result({
-  "duration": 3869959443,
+  "duration": 3610707551,
   "status": "passed"
 });
 formatter.match({
@@ -82,7 +82,7 @@ formatter.match({
   "location": "StepDefinition.selectTripKind(String)"
 });
 formatter.result({
-  "duration": 734292077,
+  "duration": 1105607587,
   "status": "passed"
 });
 formatter.match({
@@ -99,45 +99,45 @@ formatter.match({
   "location": "StepDefinition.selectBookingFrom(String,String)"
 });
 formatter.result({
-  "duration": 4911541471,
+  "duration": 2746447788,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Thu, 16 Feb, 2017",
+      "val": "Fri, 12 Jan, 2018",
       "offset": 22
     },
     {
-      "val": "Thu, 18 Feb, 2017",
+      "val": "Sun, 21 Jan, 2018",
       "offset": 60
     }
   ],
   "location": "StepDefinition.selectDapartAndReturn(String,String)"
 });
 formatter.result({
-  "duration": 2588129995,
+  "duration": 2983173992,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.clickOnSearchButton()"
 });
 formatter.result({
-  "duration": 153779637,
+  "duration": 158728173,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.conformBookingSecondPage()"
 });
 formatter.result({
-  "duration": 7140016112,
+  "duration": 24101241473,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.PassItenary()"
 });
 formatter.result({
-  "duration": 6401484037,
+  "duration": 8698296266,
   "status": "passed"
 });
 formatter.match({
@@ -162,14 +162,14 @@ formatter.match({
   "location": "StepDefinition.TravellerInformation(String,String,String,String)"
 });
 formatter.result({
-  "duration": 5903362251,
+  "duration": 6197893587,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinition.PaymentValidation()"
 });
 formatter.result({
-  "duration": 8980975746,
+  "duration": 5360421583,
   "status": "passed"
 });
 });
